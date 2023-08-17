@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Biz.Gifts</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../img/biz.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+
+    <!--Chart.js JS CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="../css/mdb.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+  </head>
+
+  <body>
+    <!-- Start your project here-->
+    <!--============ HEADER -START============== -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="/">
+          <img
+            src="../img/biz_gift_logo.png"
+            height="36"
+            alt="Biz"
+            loading="lazy"
+            style="margin-top: -1px"
+          />
+        </a>
+
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarButtonsExample"
+          aria-controls="navbarButtonsExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <!-- Left links -->
+
+          <div class="d-flex align-items-center">
+            <a type="button" class="btn btn-link px-3 me-2" href="./login.html"
+              >Shamshad</a
+            >
+
+            <a type="button" class="btn btn-info me-3" href="./register.html">
+              Logout
+            </a>
+          </div>
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    <!--============ HEADER -END ============== -->
+
+    <!--============ DASHBOARD-START ============== -->
+
+    <section class="alice-blue-bg" >
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Vendor</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Dashboard
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                  alt="avatar"
+                  class="rounded-circle img-fluid"
+                  style="width: 150px"
+                />
+                <h5 class="mt-2">Business Owner Name</h5>
+                <div class="container my-2"></div>
+
+                <div class="d-flex justify-content-center mb-2">
+                  <a type="button" class="btn btn-info " href="./profile.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                  </a>
+                </div>
+                <span> </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card mb-2">
+              <div class="card-body">
+                <div class="card-body">
+                  <h4>Insights</h4>
+                </div>
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-2">
+              <div class="card-body">
+                <div class="card-body">
+                  <h4>Claimed Prize</h4>
+                </div>
+                <table class="table align-middle mb-0 bg-white my-lg-1 my-1">
+                  <thead class="bg-light">
+                    <tr>
+                      <th>No</th>
+                      <th>Gift</th>
+                      <th>Customer Name</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">1</p>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="">
+                            <p class="fw-bold mb-1">Usha Fan</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Manohar</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-warning rounded-pill d-inline"
+                          >Pending</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">2</p>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="">
+                            <p class="fw-bold mb-1">Lenovo Laptop</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Al Ameen</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-primary rounded-pill d-inline"
+                          >Completed</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <nav aria-label="Page navigation example ">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="card mb-2">
+              <div class="card-body">
+                <div class="card-body">
+                  <h4>Pending Requests</h4>
+                </div>
+                <table class="table align-middle mb-0 bg-white my-lg-1 my-1">
+                  <thead class="bg-light">
+                    <tr>
+                      <th>No</th>
+                      <th>Gift</th>
+                      <th>Customer Name</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">1</p>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="">
+                            <p class="fw-bold mb-1">Usha Fan</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Manohar</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-warning rounded-pill d-inline"
+                          >Pending</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">2</p>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="">
+                            <p class="fw-bold mb-1">Lenovo Laptop</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="fw-normal mb-1">Al Ameen</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-primary rounded-pill d-inline"
+                          >Completed</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <nav aria-label="Page navigation example ">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="card mb-2">
+              <div class="card-body">
+                <div class="card-body">
+                  <h4>Your Subscriptions</h4>
+                </div>
+
+                <div class="card card-new-light-blue p-3 my-2">
+                  <div
+                    class="d-flex justify-content-start align-items-center p-3"
+                  >
+                    <div><h4>Basic Plan (2/3)</h4></div>
+                    <div>
+                      <button type="button" class="btn btn-success mx-2">
+                        Add New
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="bg-light p-2 my-1">
+                    <table
+                      class="table align-middle mb-0 bg-white my-lg-1 my-1"
+                    >
+                      <thead class="bg-light">
+                        <tr>
+                          <th>No</th>
+                          <th>Gift Name</th>
+                          <th>Gift Count</th>
+                          <th>Action</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p class="fw-normal mb-1">1</p>
+                          </td>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <div class="">
+                                <p class="fw-bold mb-1">Usha Fan</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1">2/1000</p>
+                          </td>
+                          <td>
+                            <!-- Dark -->
+                            <div class="btn-group">
+                              <button
+                                type="button"
+                                class="btn btn-dark dropdown-toggle"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Action
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                  >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Separated link</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                          <td>
+                            <span
+                              class="badge badge-warning rounded-pill d-inline"
+                            >
+                              Pending</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="fw-normal mb-1">2</p>
+                          </td>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <div class="">
+                                <p class="fw-bold mb-1">Lenovo Laptop</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1">50/4000</p>
+                          </td>
+
+                          <td>
+                            <!-- Dark -->
+                            <div class="btn-group">
+                              <button
+                                type="button"
+                                class="btn btn-dark dropdown-toggle"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Action
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a class="dropdown-item" href="./gift_detail.html">Action</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                  >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >Separated link</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                          <td>
+                            <span
+                              class="badge badge-success rounded-pill d-inline"
+                            >
+                              Approved</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <nav aria-label="Page navigation example ">
+                      <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+
+                <div class="card card-new-light-blue p-3 my-4">
+                  <div
+                    class="d-flex justify-content-start align-items-center p-3"
+                  >
+                    <div><h4>Starter Plan (0/0)</h4></div>
+                    <div>
+                      <button type="button" class="btn btn-success mx-2">
+                        Add New
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="bg-light p-2 my-1">
+                    <table
+                      class="table align-middle mb-0 bg-white my-lg-1 my-1"
+                    >
+                      <div class="p-3">No Slots Added</div>
+                    </table>
+                  </div>
+                </div>
+
+
+                <div class="card card-new-light-blue p-3 my-2">
+                    <div
+                      class="d-flex justify-content-start align-items-center p-3"
+                    >
+                      <div><h4>Trial Plan (1/1)</h4></div>
+                      <div>
+                        <button type="button" class="btn btn-secondary mx-2">
+                          Add New
+                        </button>
+                      </div>
+                    </div>
+  
+                    <div class="bg-light p-2 my-1">
+                      <table
+                        class="table align-middle mb-0 bg-white my-lg-1 my-1"
+                      >
+                        <thead class="bg-light">
+                          <tr>
+                            <th>No</th>
+                            <th>Gift Name</th>
+                            <th>Gift Count</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>
+                              <p class="fw-normal mb-1">1</p>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="">
+                                  <p class="fw-bold mb-1">Lenovo Laptop</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1">5/1000</p>
+                            </td>
+  
+                            <td>
+                              <!-- Dark -->
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-dark dropdown-toggle"
+                                  data-mdb-toggle="dropdown"
+                                  aria-expanded="false"
+                                >
+                                  Action
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#"
+                                      >Another action</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#"
+                                      >Something else here</a
+                                    >
+                                  </li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li>
+                                    <a class="dropdown-item" href="#"
+                                      >Separated link</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                            <td>
+                              <span
+                                class="badge badge-success rounded-pill d-inline"
+                              >
+                                Approved</span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+  
+                      <nav aria-label="Page navigation example ">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--============ DASHBOARD-END ============== -->
+
+    <!--============ FOOTER -START ============== -->
+    <footer class="bg-info text-center text-white text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3">
+        © 2023 Copyright:
+        <a class="text-white" href="#">Dxglobal Software Solutions</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--============ FOOTER -END ============== -->
+
+    <!-- End your project here-->
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          datasets: [
+            {
+              data: [86, 114, 106, 106, 107, 111, 133],
+              label: "Total",
+              borderColor: "#3e95cd",
+              backgroundColor: "#7bb6dd",
+              fill: false,
+            },
+            {
+              data: [70, 90, 44, 60, 83, 90, 100],
+              label: "Accepted",
+              borderColor: "#3cba9f",
+              backgroundColor: "#71d1bd",
+              fill: false,
+            },
+            {
+              data: [10, 21, 60, 44, 17, 21, 17],
+              label: "Pending",
+              borderColor: "#ffa500",
+              backgroundColor: "#ffc04d",
+              fill: false,
+            },
+            {
+              data: [6, 3, 2, 2, 7, 0, 16],
+              label: "Rejected",
+              borderColor: "#c45850",
+              backgroundColor: "#d78f89",
+              fill: false,
+            },
+          ],
+        },
+      });
+    </script>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>
